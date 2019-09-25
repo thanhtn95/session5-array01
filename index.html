@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="margin: auto">
+<h2>Add number to Array</h2>
+<input type="number" id="dis">
+<input type="button" style="margin: auto" id="btnAdd" value="ADD" onclick="AddA()">
+<input type="button" style="margin: auto" id="btnShow" value="SHOW" onclick="ShowA()">
+<div id="result"></div>
+</body>
+<script>
+    let A = new Array();
+    function AddA() {
+        let input = document.getElementById("dis").value;
+        A.push(input);
+        document.getElementById("dis").value="";
+    }
+    function ShowA() {
+        let res =document.getElementById("result");
+        let text="";
+        for(i=0;i<A.length;i++){
+            text+="Element "+i+": "+A[i]+"<br>";
+        }
+        res.innerHTML=text;
+    }
+</script>
+</html>
